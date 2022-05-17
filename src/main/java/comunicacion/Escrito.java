@@ -5,13 +5,13 @@ public abstract class Escrito extends Pictograma{
 	private String titulo;
 	private String autor;
 	private int paginas;
-	public Escrito(String origen, String titulo, String autor, int paginas) {
+	
+	public Escrito(String origen,String titulo, String autor, int paginas) {
 		super(origen);
 		this.titulo = titulo;
 		this.autor = autor;
 		this.paginas = paginas;
 	}
-	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -30,15 +30,16 @@ public abstract class Escrito extends Pictograma{
 	public void setPaginas(int paginas) {
 		this.paginas = paginas;
 	}
-	
 	public String resumen() {
-		String r = this.getOrigen() + "\n";
-		r += this.titulo + "\n";
-		r += this.autor + "\n";
-		r += this.paginas;
-		return  r;
+		String st1 = this.getOrigen() + "\n";
+		st1 += this.titulo + "\n";
+		st1 += this.autor + "\n";
+		st1 += this.paginas + "\n";
+		return st1;
 	}
+	public abstract int palabrasTotales(int palabras);
 	
-	abstract int palabrasTotales(int palabrasPagina);
+	
+	
 	
 }

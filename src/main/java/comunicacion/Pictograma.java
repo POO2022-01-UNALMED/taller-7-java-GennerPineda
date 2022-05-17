@@ -2,8 +2,8 @@ package comunicacion;
 
 public abstract class Pictograma {
 	
-	private String origen;
-	
+	String origen;
+
 	public Pictograma(String origen) {
 		super();
 		this.origen = origen;
@@ -16,9 +16,7 @@ public abstract class Pictograma {
 	public void setOrigen(String origen) {
 		this.origen = origen;
 	}
-	
-	abstract String interpretacion ();
-	
+	public abstract String interpretacion();
 	public abstract String toString();
-	
+
 }
